@@ -5,9 +5,11 @@ import { PiEyeDuotone } from 'react-icons/pi';
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
+import { getDatabase, ref, set } from "firebase/database";
 
 const Registration = () => {
   const auth = getAuth();
+  const db = getDatabase();
   const navigate =useNavigate();
   const [email ,setEmail] = useState('');
   const hendleEmail = (e) =>{
@@ -85,6 +87,12 @@ const Registration = () => {
                 setTimeout(()=>{
                 navigate('/login')
                     },4000)
+            }).then(() =>{
+                console.log(user, 'w4oiyghjbwroeh');
+                set(ref(db, 'users/' + user.user.uid), {
+                    username: user.user.displayName,
+                    email: user.user.email,
+                  });
             })
             }).catch((error) => {
                 const errorCode = error.code;

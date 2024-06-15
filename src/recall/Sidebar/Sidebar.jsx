@@ -15,7 +15,7 @@ import { getDownloadURL, getStorage, ref, uploadString } from "firebase/storage"
 import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
-  const data = useSelector(state => state.user.userInfo.photoURL)
+  const data = useSelector(state => state.user.userInfo)
   const [image, setImage] = useState('');
   const [cropData, setCropData] = useState("");
   const cropperRef = createRef();
@@ -117,7 +117,8 @@ const Sidebar = () => {
           <div className='bg-primary pt-[38px] pb-[47px] pl-[25px] w-full rounded-[20px] '>
             <div className='relative  w-full flex justify-center ml-[-15px]'>
               <div className='w-[100px] h-[100px] relative group'>
-                <img className='rounded-full' src={data} alt="" />
+                <img className='rounded-full' src={data.photoURL} alt="" />
+                <h4 className='mt-[8px] text-center text-[20px] font-bold'>{data.displayName}</h4>
                 <div onClick={profileUpload} className='w-[0] group-hover:w-[100px] h-[100px] bg-[rgba(0,0,0,0.41)] absolute top-0 left-0 rounded-full flex justify-center items-center'>
                   <MdCloudUpload className='text-white' />
                 </div>

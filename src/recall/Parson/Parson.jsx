@@ -4,11 +4,11 @@ import img1 from '../../assets/group.png'
 const Parson = () => {
   return (
     <div>
-        <div className="clint flex mt-[17px] justify-between">
+      <div className="clint flex mt-[17px] justify-between">
         <div>
-        <img className='' src={img1} alt="" />
+          <img className='' src={img1} alt="" />
         </div>
-        <div className='ml-[14px] mr-[51px]'>
+        <div className='ml-[14px] mr-[1px]'>
           <h4 className='mt-[8px]'>Friends Reunion</h4>
           <p>Hi Guys, Wassup!</p>
         </div>
@@ -19,9 +19,9 @@ const Parson = () => {
 
       <div className="clint flex border-y-2 py-[12px] my-[12px] justify-between">
         <div>
-        <img className='' src={img1} alt="" />
+          <img className='' src={img1} alt="" />
         </div>
-        <div className='ml-[14px] mr-[51px]'>
+        <div className='ml-[14px] mr-[1px]'>
           <h4 className='mt-[8px]'>Friends Reunion</h4>
           <p>Hi Guys, Wassup!</p>
         </div>
@@ -32,9 +32,9 @@ const Parson = () => {
 
       <div className="clint flex justify-between">
         <div>
-        <img className='' src={img1} alt="" />
+          <img className='' src={img1} alt="" />
         </div>
-        <div className='ml-[14px] mr-[51px]'>
+        <div className='ml-[14px] mr-[1px]'>
           <h4 className='mt-[8px]'>Friends Reunion</h4>
           <p>Hi Guys, Wassup!</p>
         </div>
